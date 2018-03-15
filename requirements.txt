@@ -1,0 +1,9 @@
+kafka_python==1.4.1
+Flask_SocketIO==0.3.7
+Flask==0.10.1
+gevent==1.0.2
+gevent-socketio==0.3.6
+gevent-websocket==0.9.5
+greenlet==0.4.7
+kafka==1.3.5
+pyspark==2.3.0

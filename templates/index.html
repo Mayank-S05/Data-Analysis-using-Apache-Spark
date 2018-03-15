@@ -25,7 +25,6 @@
           </div>
       </nav>  
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
@@ -53,10 +52,14 @@
       </div>
     </div>  
 
-    <button type="button" class="btn btn-primary">Analyse</button>
+    <form method="POST" action="/analyse">
+    <button type="submit" class="btn btn-primary">Analyse</button>
+    </form>
     <script src="{{ url_for('static', filename='chartjs.js') }}"></script>
 
   </body>
+
+    <p id='test'></p>
 </html>
 
 <style type="text/css">
@@ -81,3 +84,26 @@ button {
   float:right;
 }
 </style>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            namespace = '/test'; // change to an empty string to use the global namespace
+
+            // the socket.io documentation recommends sending an explicit package upon connection
+            // this is specially important when using the global namespace
+            var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
+            
+            socket.on('connect', function(msg) {
+                socket.emit('my event', {data: 'I\'m connected!'});
+            });
+
+            var x = '';
+            socket.on('message', function(msg){
+                console.log(msg.time)
+                x = x + '<p>' + msg.time + '</p>';
+                $('#test').html(x);             
+            });
+          
+        });
+    </script>
