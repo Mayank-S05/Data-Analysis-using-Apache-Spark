@@ -2,8 +2,8 @@
 
 # Project Description:
 <ul>
-<li> This application is used to collect data from different source and get it processed almost real time using Spark API.  </li>           <li>    Creates input units to receive data and interface to process corresponding data in real time. </li>
-<li> The base application is a spring based webapp/ flask based webapp. </li>
+<li> This application is used to collect data from different source and get it processed almost real time using Spark API.  </li>           <li> Creates input units to receive data and interface to process corresponding data in real time. </li>
+<li> The base application is a spring-boot based webapp. </li>
 
 </ul>
 
@@ -16,15 +16,13 @@ Alpha Vantage API : Alpha Vantage offers free APIs in JSON and CSV formats for r
 Yahoo Finance : At Yahoo Finance, you get free stock quotes, the latest news, portfolio management resources, international market data, social interaction and mortgage rates to help you manage your financial life.
 </li>
  
- # Technologies used:
+# Technologies used:
  <ul>
-  <li>Java</li>
-  <li>Python</li>
-  <li>Scala</li>
-  <li>Apache Spark</li>
-  <li>Apache Kafka</li>
-  <li>Spring Boot</li>
-  <li>Flask</li>
-  <li>ChartJS</li>
-  <li>JFreeChart</li>
+<li>Java</li>
+<li>Scala</li>
+<li>Apache Spark</li>
+<li>Apache Kafka</li>
+<li>Spring Boot</li>
+<li>JFreeChart</li>
+<li>Maven</li>
   </ul>
