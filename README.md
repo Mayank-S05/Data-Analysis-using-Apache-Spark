@@ -1,4 +1,4 @@
-# Stock-Market-Analysis-using-Apache-Spark
+# Stock-Market-Analysis-using-Apache-Spark-and-Apache-Kafka
 
 # Project Description:
 <ul>
